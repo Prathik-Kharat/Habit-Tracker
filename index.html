@@ -20,10 +20,10 @@
     --accent3: #006d32;
     --accent4: #0e4429;
     --dim: #161b22;
-    --sleep: #7c6af7;
-    --coding: #39d353;
+    --sleep: #39d353;
+    --dsa: #ef4444;
     --workout: #f97316;
-    --study: #38bdf8;
+    --study: #a855f7;
     --mono: 'Berkeley Mono', monospace;
     --sans: 'DM Sans', sans-serif;
   }
@@ -249,7 +249,7 @@
   }
 
   .cell-dot.done-sleep    { background: var(--sleep); border-color: var(--sleep); }
-  .cell-dot.done-coding   { background: var(--coding); border-color: var(--coding); }
+  .cell-dot.done-dsa      { background: var(--dsa); border-color: var(--dsa); }
   .cell-dot.done-workout  { background: var(--workout); border-color: var(--workout); }
   .cell-dot.done-study    { background: var(--study); border-color: var(--study); }
 
@@ -304,20 +304,25 @@
   .grid-cell.today-cell { outline: 1.5px solid var(--text); outline-offset: 1px; }
 
   /* per-habit color overrides */
-  .habit-grid-block[data-habit="sleep"] .grid-cell.l1 { background: #2d1f6e; }
-  .habit-grid-block[data-habit="sleep"] .grid-cell.l2 { background: #4a35a8; }
-  .habit-grid-block[data-habit="sleep"] .grid-cell.l3 { background: #6251db; }
-  .habit-grid-block[data-habit="sleep"] .grid-cell.l4 { background: #7c6af7; }
+  .habit-grid-block[data-habit="sleep"] .grid-cell.l1 { background: #14532d; }
+  .habit-grid-block[data-habit="sleep"] .grid-cell.l2 { background: #166534; }
+  .habit-grid-block[data-habit="sleep"] .grid-cell.l3 { background: #16a34a; }
+  .habit-grid-block[data-habit="sleep"] .grid-cell.l4 { background: #39d353; }
+
+  .habit-grid-block[data-habit="dsa"] .grid-cell.l1 { background: #450a0a; }
+  .habit-grid-block[data-habit="dsa"] .grid-cell.l2 { background: #7f1d1d; }
+  .habit-grid-block[data-habit="dsa"] .grid-cell.l3 { background: #b91c1c; }
+  .habit-grid-block[data-habit="dsa"] .grid-cell.l4 { background: #ef4444; }
 
   .habit-grid-block[data-habit="workout"] .grid-cell.l1 { background: #431407; }
   .habit-grid-block[data-habit="workout"] .grid-cell.l2 { background: #7c2d12; }
   .habit-grid-block[data-habit="workout"] .grid-cell.l3 { background: #c2410c; }
   .habit-grid-block[data-habit="workout"] .grid-cell.l4 { background: #f97316; }
 
-  .habit-grid-block[data-habit="study"] .grid-cell.l1 { background: #082f49; }
-  .habit-grid-block[data-habit="study"] .grid-cell.l2 { background: #0c4a6e; }
-  .habit-grid-block[data-habit="study"] .grid-cell.l3 { background: #0369a1; }
-  .habit-grid-block[data-habit="study"] .grid-cell.l4 { background: #38bdf8; }
+  .habit-grid-block[data-habit="study"] .grid-cell.l1 { background: #3b0764; }
+  .habit-grid-block[data-habit="study"] .grid-cell.l2 { background: #6b21a8; }
+  .habit-grid-block[data-habit="study"] .grid-cell.l3 { background: #9333ea; }
+  .habit-grid-block[data-habit="study"] .grid-cell.l4 { background: #a855f7; }
 
   /* ── LEGEND ── */
   .legend {
@@ -468,7 +473,7 @@
   <div class="legend" style="margin-top:12px;justify-content:flex-start;padding-left:4px;">
     <span style="margin-right:4px">Legend:</span>
     <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--sleep);margin-right:3px"></span>Sleep
-    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--coding);margin:0 3px 0 10px"></span>Coding
+    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--dsa);margin:0 3px 0 10px"></span>DSA
     <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--workout);margin:0 3px 0 10px"></span>Workout
     <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--study);margin:0 3px 0 10px"></span>Study
   </div>
@@ -498,7 +503,7 @@
 <script>
 const HABITS = [
   { key: 'sleep',   label: '😴 Sleep',   color: 'var(--sleep)'   },
-  { key: 'coding',  label: '💻 Coding',  color: 'var(--coding)'  },
+  { key: 'dsa',     label: '🧠 DSA',     color: 'var(--dsa)'     },
   { key: 'workout', label: '🏋 Workout', color: 'var(--workout)' },
   { key: 'study',   label: '📚 Study',   color: 'var(--study)'   },
 ];
